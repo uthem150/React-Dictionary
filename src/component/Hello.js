@@ -1,20 +1,33 @@
-import World from "./World";
-import styles from "./Hello.module.css";
-
 export default function hello() {
+  function showName() {
+    console.log("Mike");
+  }
+
+  function showText(txt) {
+    console.log(txt)
+  }
+
   return (
     <>
-      <h1
-        style={{
-          color: "#f00",
-          borderRadius: "12px solid #000",
-          marginBottom: "30px",
-          opacity: 0.7,
+      <h1>Hello</h1>
+      {/* showName()을 하면, showName이 반환하는 값이 나옴. */}
+      <button onClick={showName}>Show name</button>
+
+      <button
+        onClick={() => {
+          console.log(24);
         }}
       >
-        Hello
-      </h1>
-      <div className={styles.box}>Hello</div>
+        Show age
+      </button>
+
+      <input
+        type="text"
+        onChange={(e) => {
+          const txt = e.target.value;
+          showText(txt);
+        }}
+      ></input>
     </>
   );
 }

@@ -1,7 +1,0 @@
-/* 각 component에 종속되어있는 css 파일 */
-
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-}
