@@ -13,8 +13,8 @@ export default function Day() {
 
   return (
     <>
+      <h2>Day {day}</h2>
       <table>
-        <h2>Day {day}</h2>
         <tbody>
           {/* ()=>{}을 하면 {}안에 return을 넣어야 함*/}
           {wordList.map((word) => (
