@@ -1,33 +1,19 @@
-export default function hello() {
-  function showName() {
-    console.log("Mike");
-  }
+import { useState } from "react";
 
-  function showText(txt) {
-    console.log(txt)
-  }
+export default function Hello() {
+  const [name, setName] = useState("Mike");
 
   return (
     <>
-      <h1>Hello</h1>
-      {/* showName()을 하면, showName이 반환하는 값이 나옴. */}
-      <button onClick={showName}>Show name</button>
-
+      <h1>state</h1>
+      <h2>{name}</h2>
       <button
         onClick={() => {
-          console.log(24);
+          setName(name === "Mike" ? "Jane" : "Mike");
         }}
       >
-        Show age
+        change
       </button>
-
-      <input
-        type="text"
-        onChange={(e) => {
-          const txt = e.target.value;
-          showText(txt);
-        }}
-      ></input>
     </>
   );
 }
