@@ -135,3 +135,21 @@ button {
   background-color: lightseagreen;
   margin: 5px;
 }
+
+.prev_move_btn,
+.next_move_btn {
+  background-color: rgb(122, 197, 194);
+  flex: 0 0 auto;
+}
+
+.day_move_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.center_content {
+  /* flex-grow, flex-shrink, flex-basis 값을 각각 1, 1, auto로 설정 */
+  flex: 1 1 auto;
+  text-align: center;
+}
