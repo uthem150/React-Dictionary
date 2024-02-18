@@ -23,6 +23,10 @@
     {
       "id": "1b4b",
       "day": 6
+    },
+    {
+      "id": "0f8c",
+      "day": 7
     }
   ],
   "words": [
@@ -94,6 +98,27 @@
       "day": "5",
       "eng": "pen",
       "kor": "펜",
+      "isDone": false
+    },
+    {
+      "id": "1c9b",
+      "day": "7",
+      "eng": "cat",
+      "kor": "고양이",
+      "isDone": false
+    },
+    {
+      "id": "d0f1",
+      "day": "1",
+      "eng": "dog",
+      "kor": "개",
+      "isDone": false
+    },
+    {
+      "id": "8e9d",
+      "day": "5",
+      "eng": "water",
+      "kor": "물",
       "isDone": false
     }
   ]

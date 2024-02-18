@@ -4,6 +4,10 @@ import useFetch from "../hooks/useFetch";
 export default function DayList() {
   const days = useFetch("http://localhost:3005/days");
 
+  if (days.length === 0) {
+    return <span>Loading...</span>;
+  }
+
   return (
     <>
       <ul className="list_day">
