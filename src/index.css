@@ -130,3 +130,8 @@ button {
   height: 40px;
   font-size: 20px;
 }
+
+.add_btn {
+  background-color: lightseagreen;
+  margin: 5px;
+}

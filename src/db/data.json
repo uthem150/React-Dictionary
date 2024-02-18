@@ -15,6 +15,14 @@
     {
       "day": 4,
       "id": "4"
+    },
+    {
+      "id": "d299",
+      "day": 5
+    },
+    {
+      "id": "1b4b",
+      "day": 6
     }
   ],
   "words": [
@@ -24,13 +32,6 @@
       "eng": "book",
       "kor": "책",
       "isDone": false
-    },
-    {
-      "day": "3",
-      "eng": "window",
-      "kor": "창문",
-      "isDone": false,
-      "id": "7"
     },
     {
       "day": "3",
@@ -59,6 +60,41 @@
       "kor": "사과",
       "isDone": false,
       "id": "12"
+    },
+    {
+      "id": "eb6f",
+      "day": "1",
+      "eng": "pizza",
+      "kor": "피자",
+      "isDone": false
+    },
+    {
+      "id": "6c7b",
+      "day": "2",
+      "eng": "chicken",
+      "kor": "닭",
+      "isDone": false
+    },
+    {
+      "id": "66c0",
+      "day": "2",
+      "eng": "korea",
+      "kor": "한국",
+      "isDone": false
+    },
+    {
+      "id": "7ea8",
+      "day": "6",
+      "eng": "cake",
+      "kor": "케이크",
+      "isDone": false
+    },
+    {
+      "id": "1b8f",
+      "day": "5",
+      "eng": "pen",
+      "kor": "펜",
+      "isDone": false
     }
   ]
 }
