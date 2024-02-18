@@ -10,6 +10,7 @@ export default function Day() {
   const words = useFetch(`http://localhost:3005/words?day=${day}`);
 
   const days = useFetch("http://localhost:3005/days");
+
   const navigate = useNavigate();
 
   function prev() {
@@ -22,13 +23,38 @@ export default function Day() {
     navigate(`/day/${nextDay}`);
   }
 
+  const day_obj = useFetch(`http://localhost:3005/days?day=${day}`);
+
+  function deleteDay() {
+    if (window.confirm("삭제 하시겠습니까?")) {
+      const dayId = day_obj[0].id; // 삭제할 day의 id
+      const wordsToDelete = words.map((word) => word.id);
+      // 삭제할 단어들의 id를 담을 배열
+
+      fetch(`http://localhost:3005/days/${dayId}`, {
+        method: "DELETE",
+      }).then((res) => {
+        if (res.ok) {
+          navigate(`/`);
+        }
+      });
+
+      // 단어들 삭제 요청 추가
+      wordsToDelete.forEach((wordId) => {
+        fetch(`http://localhost:3005/words/${wordId}`, {
+          method: "DELETE",
+        });
+      });
+    }
+  }
+
   let showPrevButton = true;
   let showNextButton = true;
   //parms로 받아온 day (주소창의 값)
   if (Number(day) === 1) {
     showPrevButton = false;
   }
-  //days 배열을 가져오는 부분인 const days = useFetch("http://localhost:3005/days");이 비동기적으로 이루어지고 있습니다. 즉, 데이터를 불러오는 동안 days 배열의 길이는 0일 것입니다.
+  // 데이터를 불러오는 동안 days 배열의 길이는 0이므로,
   if (days.length > 0 && Number(day) >= days.length) {
     showNextButton = false;
   }
@@ -36,19 +62,27 @@ export default function Day() {
   return (
     <>
       <div className="day_move_container">
-        {showPrevButton && (
+        {showPrevButton ? (
           <button className="prev_move_btn" onClick={prev}>
+            ◀
+          </button>
+        ) : (
+          <button disabled className="block_btn">
             ◀
           </button>
         )}
         <h2 className="center_content">Day {day}</h2>
-        {showNextButton && (
+        {showNextButton ? (
           <button className="next_move_btn" onClick={next}>
+            ▶
+          </button>
+        ) : (
+          <button disabled className="block_btn">
             ▶
           </button>
         )}
       </div>
-      {words.length === 0 && <span>Loading...</span>}
+      {/* {words.length === 0 && <span>Loading...</span>} */}
       <table>
         <tbody>
           {/* ()=>{}을 하면 {}안에 return을 넣어야 함*/}
@@ -57,6 +91,9 @@ export default function Day() {
           ))}
         </tbody>
       </table>
+      <button onClick={deleteDay} className="btn_del">
+        Delete
+      </button>
     </>
   );
 }
