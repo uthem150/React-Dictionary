@@ -1,1 +1,1 @@
-![ezgif-7-3c40c6dba7](https://github.com/uthem150/React-Dictionary/assets/142042011/c6fd98c4-2fd5-4c51-a568-9ca689465ff5)
+![ezgif-7-b78c21ae2d](https://github.com/uthem150/React-Dictionary/assets/142042011/8e563c52-da68-441c-a264-2210799fbb23)
