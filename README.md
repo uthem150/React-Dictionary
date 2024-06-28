@@ -1,7 +1,6 @@
 # 'React JS' 단어장 제작
 <br>
 
-공부 자료 : "[코딩앙마 youtube react js강좌](https://www.youtube.com/@codingangma/playlists)"
 
 | 실행화면 |
 |----------|
@@ -50,6 +49,8 @@
 
 ## 📍추가 기능
 - [Day 이동 기능](https://github.com/uthem150/React-Dictionary/commit/1f73d117e768cc387029f5c63da7d4d412b14c24)
+
+- 공부 자료 : "[코딩앙마 youtube react js강좌](https://www.youtube.com/@codingangma/playlists)"
   - 현재 위치와 전체 day의 length를 기반으로, 각 day를 움직일 수 있는 이동 버튼을 추가하였습니다
 
 - [Day 삭제 기능](https://github.com/uthem150/React-Dictionary/commit/baf9dd18b5dfbca24a03f50c039c6307d02f46a4)
